@@ -1,3 +1,1 @@
-# NewLauncher
- https://samp-mobile.online samp source code
-# samp
+samp mobile is unstable
