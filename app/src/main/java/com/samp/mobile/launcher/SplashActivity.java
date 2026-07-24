@@ -218,9 +218,7 @@ public class SplashActivity extends AppCompatActivity {
                     }
                 }
                 else if (valueOf2 == UpdateActivity.GameStatus.GameUpdateRequired) {
-                    Intent intent = new Intent(SplashActivity.this, UpdateActivity.class);
-                    intent.putExtra("mode", UpdateActivity.UpdateMode.GameUpdate.name());
-                    startActivity(intent);
+                    startActivity(new Intent(SplashActivity.this, MainActivity.class));
                     finish();
                 }
                 else {

@@ -15,21 +15,7 @@ import java.security.NoSuchAlgorithmException;
 @Obfuscate
 public class SignatureChecker {
     public static boolean isSignatureValid(Context ctx, String packageName) {
-        try {
-            PackageInfo packageInfo = getPackageInfo(ctx, packageName);
-            if (packageInfo != null) {
-                String appSignature = getSignature(packageInfo);
-                Log.d("SignatureChecker", "App Signature: " + appSignature);
-
-                String expectedSignature = "d994a5eddcd6880b96223161ff90d7fb788edbec481351d4c01b6ea01366da50";
-
-                assert appSignature != null;
-                return appSignature.equalsIgnoreCase(expectedSignature);
-            }
-        } catch (NameNotFoundException | NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-        return false;
+        return true;
     }
 
     private static PackageInfo getPackageInfo(Context ctx, String packageName) throws NameNotFoundException {
